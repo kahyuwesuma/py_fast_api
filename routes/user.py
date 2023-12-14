@@ -10,7 +10,7 @@ async def read_data():
   return conn.execute(users.select()).fetchall()
 
 @user.get("/{id}")
-async def read_data(id:int): ==
+async def read_data(id:int): 
   return conn.execute(users.select().where(
     users.c.id == id
   )).fetchall()
@@ -37,4 +37,5 @@ async def read_data():
   conn.execute(users.delete().where(
     users.c.id == id
   ))
-  return conn.execute(users.select()).fetchall()
+  return conn.execute(users.select()).fetchall()
+
